@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+Disallow: /_archive/
+Disallow: /node_modules/
+Disallow: /.git/
+
+# AI検索クローラーを明示的に歓迎
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# サイトマップ
+Sitemap: https://yamashita0330.github.io/koifes_tokushima/sitemap.xml
