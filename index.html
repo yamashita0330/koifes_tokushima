@@ -2356,5 +2356,22 @@
   </a>
 </div>
 
+<!-- 訪問通知ビーコン（Netlify Forms→メール / 1端末1日1通） -->
+<script>
+(function(){
+  try{
+    var k='kf_visit_'+new Date().toISOString().slice(0,10);
+    if(localStorage.getItem(k))return;
+    localStorage.setItem(k,'1');
+    var b=new URLSearchParams();
+    b.append('form-name','koifes-visit');
+    b.append('ページ',location.pathname+location.search);
+    b.append('流入元',document.referrer||'直接/不明');
+    b.append('端末',navigator.userAgent);
+    b.append('時刻',new Date().toLocaleString('ja-JP'));
+    fetch('https://koifes-visit-notify.netlify.app/',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b.toString()});
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
