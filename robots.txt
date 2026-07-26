@@ -30,4 +30,4 @@ User-agent: CCBot
 Allow: /
 
 # サイトマップ
-Sitemap: https://yamashita0330.github.io/koifes_tokushima/sitemap.xml
+Sitemap: https://koifes-japan.com/sitemap.xml
