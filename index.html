@@ -552,6 +552,23 @@
     0%,100% { opacity: 0.5; transform: translateY(0); }
     50% { opacity: 1; transform: translateY(4px); }
   }
+  .new-event-badge {
+    display: inline-flex; align-items: center; gap: 9px; align-self: center;
+    background: var(--accent); color: var(--text-dark);
+    border: 3px solid var(--text-dark); border-radius: 999px;
+    padding: 9px 22px; font-weight: 900; font-size: clamp(0.8rem, 2vw, 0.95rem);
+    box-shadow: 4px 4px 0px #111111; text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .new-event-badge:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #111111; }
+  .new-event-dot {
+    width: 9px; height: 9px; background: var(--primary); border-radius: 50%;
+    display: inline-block; flex-shrink: 0; animation: newDotPulse 1.4s ease-in-out infinite;
+  }
+  @keyframes newDotPulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.35; transform: scale(1.4); }
+  }
   .huge-rate-num { display: inline-block; }
   .contact-form { background: #fff; border: var(--border-thick); box-shadow: var(--shadow-heavy); padding: 25px 15px; max-width: 800px; margin: 0 auto; }
   .form-group { margin-bottom: 25px; }
@@ -677,6 +694,7 @@
       <div class="marquee-content">KOI-FES JAPAN TOKUSHIMA - 徳島の婚活・恋活イベント - 成婚・交際実績1000組 -</div>
     </div>
     <div class="hero-center-action fade-in-element">
+      <a href="#events-area" class="new-event-badge hover-target"><span class="new-event-dot"></span>NEW｜8月開催イベント受付中 →</a>
       <h1 style="font-size: clamp(1.5rem, 4vw, 2.4rem); font-weight: 900; margin: 0 0 8px 0; line-height: 1.4; color: #111;">徳島最大の<br><span style="background: linear-gradient(transparent 60%, var(--accent) 60%);">体験型 婚活・恋活イベント</span></h1>
       <p style="font-weight: bold; font-size: clamp(0.9rem, 2.2vw, 1.05rem); color: #444; margin: 0 0 20px 0; line-height: 1.7;">参加するだけで「自分の恋愛スコア」がわかる、<br>新しい徳島の婚活・恋活スタイル。</p>
       <button class="hero-btn hover-target" onclick="showView('diagnosis-view')">恋の性格診断を受ける →</button>
