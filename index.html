@@ -569,6 +569,53 @@
     0%,100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.35; transform: scale(1.4); }
   }
+
+  /* 来訪直後に出る新着イベントポップアップ */
+  .event-popup-overlay {
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(17,17,17,0.55);
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.25s ease;
+  }
+  .event-popup-overlay.visible { opacity: 1; pointer-events: auto; }
+  .event-popup {
+    position: relative; width: 100%; max-width: 380px;
+    background: #fff; border: var(--border-thick);
+    box-shadow: 8px 8px 0px #111111;
+    padding: 30px 26px 26px; text-align: center;
+    transform: scale(0.85) translateY(10px); opacity: 0;
+    transition: transform 0.3s cubic-bezier(.2,1.4,.4,1), opacity 0.3s ease;
+  }
+  .event-popup-overlay.visible .event-popup { transform: scale(1) translateY(0); opacity: 1; }
+  .event-popup-close {
+    position: absolute; top: 10px; right: 10px;
+    width: 30px; height: 30px; border: 2px solid var(--text-dark);
+    background: #fff; font-size: 1.1rem; font-weight: 900; line-height: 1;
+    cursor: pointer;
+  }
+  .event-popup-flag {
+    display: inline-block; background: var(--primary); color: #fff;
+    font-weight: 900; font-size: 0.8rem; letter-spacing: 0.05em;
+    padding: 5px 14px; border: 2px solid var(--text-dark);
+    box-shadow: 3px 3px 0px #111111; margin-bottom: 14px;
+    animation: newDotPulse 1.6s ease-in-out infinite;
+  }
+  .event-popup h3 { font-size: 1.3rem; font-weight: 900; margin: 0 0 16px 0; line-height: 1.4; }
+  .event-popup-list { list-style: none; padding: 0; margin: 0 0 20px 0; text-align: left; display: flex; flex-direction: column; gap: 10px; }
+  .event-popup-list li {
+    font-weight: bold; font-size: 0.92rem; background: #f7f7f7;
+    border: 2px solid var(--text-dark); padding: 10px 12px;
+  }
+  .event-popup-list b { color: var(--primary); }
+  .event-popup-btn {
+    display: block; background: var(--text-dark); color: #fff;
+    font-weight: 900; font-size: 1.05rem; text-decoration: none;
+    padding: 14px; border: 2px solid var(--text-dark);
+    box-shadow: 4px 4px 0px var(--accent); transition: 0.2s;
+  }
+  .event-popup-btn:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0px var(--accent); }
   .huge-rate-num { display: inline-block; }
   .contact-form { background: #fff; border: var(--border-thick); box-shadow: var(--shadow-heavy); padding: 25px 15px; max-width: 800px; margin: 0 auto; }
   .form-group { margin-bottom: 25px; }
@@ -653,6 +700,20 @@
 </style>
 </head>
 <body>
+
+<!-- 来訪直後に出る新着イベントポップアップ -->
+<div class="event-popup-overlay" id="eventPopupOverlay">
+  <div class="event-popup">
+    <button class="event-popup-close hover-target" onclick="closeEventPopup()" aria-label="閉じる">×</button>
+    <span class="event-popup-flag">NEW EVENT</span>
+    <h3>8月開催イベント<br>受付中です！</h3>
+    <ul class="event-popup-list">
+      <li><b>8/12(水)</b> 阿波踊り恋フェス</li>
+      <li><b>8/29(土)・30(日)</b> ゆめタウン恋フェス</li>
+    </ul>
+    <a href="#events-area" class="event-popup-btn hover-target" onclick="closeEventPopup()">詳細を見る →</a>
+  </div>
+</div>
 
 <div class="custom-cursor" id="customCursor"></div>
 
@@ -2330,6 +2391,19 @@
   window.addEventListener('scroll', () => {
     if(window.scrollY > 500) { fixedLineBar.classList.add('visible'); }
     else { fixedLineBar.classList.remove('visible'); }
+  });
+
+  // 来訪直後に新着イベントポップアップを表示（1セッション1回）
+  const eventPopupOverlay = document.getElementById('eventPopupOverlay');
+  function closeEventPopup() {
+    eventPopupOverlay.classList.remove('visible');
+    sessionStorage.setItem('koifesEventPopupSeen', '1');
+  }
+  if (!sessionStorage.getItem('koifesEventPopupSeen')) {
+    setTimeout(() => { eventPopupOverlay.classList.add('visible'); }, 500);
+  }
+  eventPopupOverlay.addEventListener('click', (e) => {
+    if (e.target === eventPopupOverlay) closeEventPopup();
   });
 </script>
 <!-- 固定LINE CTAバー（スクロール後に出現） -->
