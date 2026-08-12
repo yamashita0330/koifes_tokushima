@@ -32,6 +32,7 @@
     <priority>0.7</priority>
   </url>
   <url><loc>https://koifes-japan.com/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://koifes-japan.com/blog/manzokudo-koukan/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://koifes-japan.com/blog/mata-aitai-jouken/</loc><lastmod>2026-08-11</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://koifes-japan.com/blog/yuzurenai-joken/</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://koifes-japan.com/blog/en-ga-areba/</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
