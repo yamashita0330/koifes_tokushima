@@ -2465,7 +2465,7 @@
   var send=function(){
     if(sent) return; sent=true;
     var b=new URLSearchParams();
-    b.append('form-name','koifes-visit');
+    b.append('form-name','koifes-visit2');
     b.append('アクション','スクロール');
     b.append('ラベル',STEPS[deepest][1]);
     b.append('ページ',location.pathname+location.search);
@@ -2495,7 +2495,8 @@
     if(localStorage.getItem(k))return;
     localStorage.setItem(k,'1');
     var b=new URLSearchParams();
-    b.append('form-name','koifes-visit');
+    b.append('form-name','koifes-visit2');
+    b.append('アクション','訪問');
     b.append('ページ',location.pathname+location.search);
     b.append('流入元',document.referrer||'直接/不明');
     b.append('端末',navigator.userAgent);
