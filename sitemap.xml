@@ -31,6 +31,41 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://koifes-japan.com/#area-area</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://koifes-japan.com/#theme-area</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://koifes-japan.com/evidence-koikatsu/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://koifes-japan.com/single-mother/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://koifes-japan.com/senior/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://koifes-japan.com/sports/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://koifes-japan.com/after5/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url><loc>https://koifes-japan.com/blog/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://koifes-japan.com/blog/manzokudo-koukan/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://koifes-japan.com/blog/tokushima-koikatsu-first-time-majority/</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
