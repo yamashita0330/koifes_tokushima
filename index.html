@@ -372,9 +372,9 @@
     transform: translate(-2px, -2px); box-shadow: 4px 4px 0px var(--text-dark);
   }
   .section-title {
-    font-size: 1.8rem; font-weight: 900;
+    font-size: 1.4rem; font-weight: 900;
     text-transform: uppercase; border-bottom: var(--border-thick);
-    display: inline-block; margin-bottom: 40px; padding-bottom: 10px;
+    display: inline-block; margin-bottom: 24px; padding-bottom: 10px;
     background: linear-gradient(transparent 60%, var(--primary) 60%);
   }
   /* ===== 開催予定イベント カード ===== */
@@ -490,9 +490,22 @@
   }
   .diagnosis-banner-mid > div:last-child { white-space: normal; width: 100%; text-align: center; box-sizing: border-box; }
   .diagnosis-banner-mid:hover { transform: translate(-5px, -5px); box-shadow: var(--shadow-hover); }
-  .card-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 40px; }
+  .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
   .neobrutal-card { background-color: #ffffff; border: var(--border-thick); box-shadow: var(--shadow-heavy); display: flex; flex-direction: column; transition: 0.3s; text-align: left; overflow: hidden; }
   .neobrutal-card:hover { transform: translate(-10px, -10px); box-shadow: var(--shadow-hover); }
+  .archive-card-header { padding: 28px 12px; text-align: center; position: relative; overflow: hidden; }
+  .archive-card-bgtext { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.10; font-size: 3.2rem; font-weight: 900; color: white; display: flex; align-items: center; justify-content: center; pointer-events: none; white-space: nowrap; overflow: hidden; }
+  .archive-card-ribbon { position: absolute; top: 10px; right: -28px; background: #dc2626; color: #fff; font-weight: 900; font-size: 0.55rem; padding: 3px 28px; transform: rotate(35deg); border: 2px solid #fff; letter-spacing: 0.1em; }
+  .archive-card-header-inner { position: relative; z-index: 2; }
+  .archive-card-badge { color: #111; display: inline-block; padding: 3px 8px; font-weight: 900; font-size: 0.62rem; margin-bottom: 8px; border: 2px solid #fff; }
+  .archive-card-title { font-size: 1.05rem; font-weight: 900; color: white; line-height: 1.2; margin-bottom: 6px; }
+  .archive-card-tag { font-weight: 900; font-size: 0.6rem; display: inline-block; padding: 2px 6px; border: 2px solid; }
+  .archive-card-body { padding: 12px 10px; background: #fff; }
+  .archive-stats { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+  .archive-stat { background: #f0f0f0; border: 2px solid #111; padding: 5px 8px; font-weight: 900; font-size: 0.6rem; text-align: center; }
+  .archive-stat-num { color: var(--primary); font-size: 1rem; font-weight: 900; }
+  .archive-stat-label { font-size: 0.6rem; color: #555; }
+  .archive-card-desc { font-size: 0.72rem; font-weight: bold; color: #444; line-height: 1.5; margin: 0; }
   .card-img { height: 250px; object-fit: cover; border-bottom: var(--border-thick); width: 100%; display: block; }
   .success-tag { background: var(--primary); color: white; padding: 4px 10px; font-weight: 900; border: 2px solid #111111; display: inline-block; margin-bottom: 10px; }
   .btn-apply-card { background: var(--text-dark); color: white; padding: 15px; font-weight: 900; text-align: center; border-top: var(--border-thick); font-size: 1.2rem; }
@@ -684,26 +697,26 @@
   .area-tab.active { background: var(--primary); color: #fff; }
   .area-panel { display: none; background: #f9f9f9; border: var(--border-thick); box-shadow: var(--shadow-heavy); padding: 28px 24px; }
   .area-panel.active { display: block; }
-  .theme-card-grid { display: grid; grid-template-columns: 1fr; gap: 28px; }
+  .theme-card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .theme-card {
     position: relative; overflow: hidden;
     border: var(--border-thick); box-shadow: var(--shadow-heavy);
-    padding: 30px 26px; display: flex; flex-direction: column;
-    align-items: center; text-align: center; gap: 14px;
+    padding: 14px 10px; display: flex; flex-direction: column;
+    align-items: center; text-align: center; gap: 6px;
     transition: 0.2s;
   }
   .theme-card:hover { transform: translate(-6px,-6px); box-shadow: var(--shadow-hover); }
   .theme-card-bgtext {
     position: absolute; top: -0.15em; right: -0.05em; z-index: 1;
-    font-size: 4.5rem; font-weight: 900; line-height: 1; letter-spacing: -0.02em;
+    font-size: 2.8rem; font-weight: 900; line-height: 1; letter-spacing: -0.02em;
     color: #111; opacity: 0.07; white-space: nowrap; pointer-events: none;
     text-transform: uppercase;
   }
-  .theme-card-logo { position: relative; z-index: 2; width: 74%; max-width: 260px; max-height: 170px; object-fit: contain; }
-  .theme-card-chip { position: relative; z-index: 2; display: inline-block; font-weight: 900; font-size: 0.78rem; padding: 5px 12px; border: 2px solid #111; background: #fff; }
+  .theme-card-logo { position: relative; z-index: 2; width: 65%; max-width: 120px; max-height: 80px; object-fit: contain; }
+  .theme-card-chip { position: relative; z-index: 2; display: inline-block; font-weight: 900; font-size: 0.58rem; padding: 3px 8px; border: 2px solid #111; background: #fff; }
   .theme-card-chip.is-live { background: var(--accent); }
   .theme-card-chip.is-soon { background: #fff; color: #666; }
-  .theme-card-desc, .theme-card-cta { position: relative; z-index: 2; margin: 0; }
+  .theme-card-desc, .theme-card-cta { position: relative; z-index: 2; margin: 0; font-size: 0.68rem; }
 
   /* ===== モバイルファースト：768px以上はデスクトップ拡張 ===== */
   @media (min-width: 768px) {
@@ -748,7 +761,24 @@
     .line-btn .line-icon-wrap { width: 52px; height: 52px; }
     .line-btn .line-icon-wrap .phone-svg { width: 52px; height: 52px; }
     .fixed-line-bar { width: auto; }
-    .theme-card-grid { grid-template-columns: repeat(2, 1fr); }
+    .theme-card-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .theme-card { padding: 30px 26px; gap: 14px; }
+    .theme-card-logo { width: 74%; max-width: 260px; max-height: 170px; }
+    .theme-card-chip { font-size: 0.78rem; padding: 5px 12px; }
+    .theme-card-desc, .theme-card-cta { font-size: 1rem; }
+    /* 過去のイベント実績カード（アーカイブ） */
+    .archive-card-header { padding: 60px 30px; }
+    .archive-card-bgtext { font-size: 8rem; }
+    .archive-card-ribbon { font-size: 0.7rem; padding: 4px 36px; top: 14px; right: -32px; }
+    .archive-card-badge { font-size: 0.8rem; padding: 4px 14px; margin-bottom: 16px; }
+    .archive-card-title { font-size: 2rem; margin-bottom: 12px; }
+    .archive-card-tag { font-size: 0.85rem; padding: 3px 10px; }
+    .archive-card-body { padding: 20px; }
+    .archive-stats { gap: 16px; margin-bottom: 12px; }
+    .archive-stat { padding: 8px 14px; font-size: 0.85rem; }
+    .archive-stat-num { font-size: 1.4rem; }
+    .archive-stat-label { font-size: 0.75rem; }
+    .archive-card-desc { font-size: 0.9rem; line-height: 1.6; }
   }
 </style>
 </head>
@@ -1212,7 +1242,7 @@
       <a href="/single-mother/" class="theme-card hover-target" style="background: linear-gradient(135deg, #fff1f0 0%, #ffe3df 100%);">
         <div class="theme-card-bgtext">KODUREKON</div>
         <span class="theme-card-chip is-soon">近日開催予定</span>
-        <img class="theme-card-logo" src="/images/logos/kodurekon-logo.png?v=2" alt="子連れ婚">
+        <img class="theme-card-logo" src="/images/logos/kodurekon-logo.png?v=3" alt="子連れ婚">
         <p class="theme-card-desc" style="font-weight:bold; color:#555; line-height:1.7;">対象：ひとり親の方<br>同じ境遇を理解し合える、安心して参加できる出会いの場。</p>
         <p class="theme-card-cta" style="font-weight:900; color:#888;">LINE先行登録受付中 →</p>
       </a>
@@ -1451,82 +1481,82 @@
 
       <!-- Novia Novio クリスマス恋フェス（医療関係者限定） -->
       <div class="neobrutal-card fade-in-element" style="overflow:hidden;">
-        <div style="background: linear-gradient(135deg, #0f5132 0%, #166534 100%); padding: 60px 30px; text-align:center; position:relative; overflow:hidden;">
-          <div style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.10; font-size:8rem; font-weight:900; color:white; display:flex; align-items:center; justify-content:center; pointer-events:none; white-space:nowrap; overflow:hidden;">XMAS</div>
+        <div class="archive-card-header" style="background: linear-gradient(135deg, #0f5132 0%, #166534 100%);">
+          <div class="archive-card-bgtext">XMAS</div>
           <!-- Christmas ribbon -->
-          <div style="position:absolute; top:14px; right:-32px; background:#dc2626; color:#fff; font-weight:900; font-size:0.7rem; padding:4px 36px; transform:rotate(35deg); border:2px solid #fff; letter-spacing:0.1em;">CHRISTMAS</div>
-          <div style="position:relative; z-index:2;">
-            <div style="background:#fbbf24; color:#111; display:inline-block; padding:4px 14px; font-weight:900; font-size:0.8rem; margin-bottom:16px; border:2px solid #fff;">Vol.1 — 2024.12</div>
-            <div style="font-size:2rem; font-weight:900; color:white; line-height:1.2; margin-bottom:12px;">Novia Novio<br>クリスマス恋フェス</div>
-            <div style="color:#fbbf24; font-weight:900; font-size:0.85rem; background:rgba(0,0,0,0.3); display:inline-block; padding:3px 10px; border:2px solid #fbbf24;">医療関係者限定</div>
+          <div class="archive-card-ribbon">CHRISTMAS</div>
+          <div class="archive-card-header-inner">
+            <div class="archive-card-badge" style="background:#fbbf24;">Vol.1 — 2024.12</div>
+            <div class="archive-card-title">Novia Novio<br>クリスマス恋フェス</div>
+            <div class="archive-card-tag" style="color:#fbbf24; background:rgba(0,0,0,0.3); border-color:#fbbf24;">医療関係者限定</div>
           </div>
         </div>
-        <div style="padding:20px; background:#fff;">
-          <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:12px;">
-            <div style="background:#f0f0f0; border:2px solid #111; padding:8px 14px; font-weight:900; font-size:0.85rem; text-align:center;">
-              <div style="color:var(--primary); font-size:1.4rem; font-weight:900;">5組</div>
-              <div style="font-size:0.75rem; color:#555;">マッチング成立</div>
+        <div class="archive-card-body">
+          <div class="archive-stats">
+            <div class="archive-stat">
+              <div class="archive-stat-num">5組</div>
+              <div class="archive-stat-label">マッチング成立</div>
             </div>
-            <div style="background:#f0f0f0; border:2px solid #111; padding:8px 14px; font-weight:900; font-size:0.85rem; text-align:center;">
-              <div style="color:var(--primary); font-size:1.4rem; font-weight:900;">12組</div>
-              <div style="font-size:0.75rem; color:#555;">参加カップル</div>
+            <div class="archive-stat">
+              <div class="archive-stat-num">12組</div>
+              <div class="archive-stat-label">参加カップル</div>
             </div>
-            <div style="background:#f0f0f0; border:2px solid #111; padding:8px 14px; font-weight:900; font-size:0.85rem; text-align:center;">
-              <div style="color:var(--primary); font-size:1.4rem; font-weight:900;">42<span style="font-size:0.7em;">%</span></div>
-              <div style="font-size:0.75rem; color:#555;">マッチング率</div>
+            <div class="archive-stat">
+              <div class="archive-stat-num">42<span style="font-size:0.7em;">%</span></div>
+              <div class="archive-stat-label">マッチング率</div>
             </div>
           </div>
-          <p style="font-size:0.9rem; font-weight:bold; color:#444; line-height:1.6; margin:0;">徳島の結婚式場「Novia Novio」で開催。クリスマス前の特別な雰囲気の中、医療関係者限定で実施し、12組中5組がマッチング成立。質の高い出会いを提供した記念すべき第1回。</p>
+          <p class="archive-card-desc">徳島の結婚式場「Novia Novio」で開催。クリスマス前の特別な雰囲気の中、医療関係者限定で実施し、12組中5組がマッチング成立。質の高い出会いを提供した記念すべき第1回。</p>
         </div>
       </div>
 
       <!-- 万代恋フェス -->
       <div class="neobrutal-card fade-in-element" style="overflow:hidden;">
-        <div style="background: #111; padding: 60px 30px; text-align:center; position:relative; overflow:hidden;">
-          <div style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.08; font-size:8rem; font-weight:900; color:white; display:flex; align-items:center; justify-content:center; pointer-events:none; white-space:nowrap; overflow:hidden;">KOI</div>
-          <div style="position:relative; z-index:2;">
-            <div style="background:var(--accent); color:#111; display:inline-block; padding:4px 14px; font-weight:900; font-size:0.8rem; margin-bottom:16px; border:2px solid #fff;">Vol.2 — 2025.02</div>
-            <div style="font-size:2.2rem; font-weight:900; color:white; line-height:1.2; margin-bottom:12px;">万代倉庫<br>恋フェス</div>
+        <div class="archive-card-header" style="background: #111;">
+          <div class="archive-card-bgtext">KOI</div>
+          <div class="archive-card-header-inner">
+            <div class="archive-card-badge" style="background:var(--accent);">Vol.2 — 2025.02</div>
+            <div class="archive-card-title">万代倉庫<br>恋フェス</div>
             <div style="color:#aaa; font-weight:bold; font-size:0.9rem;">2days 開催</div>
           </div>
         </div>
-        <div style="padding:20px; background:#fff;">
-          <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:12px;">
-            <div style="background:#f0f0f0; border:2px solid #111; padding:8px 14px; font-weight:900; font-size:0.85rem; text-align:center;">
-              <div style="color:var(--primary); font-size:1.4rem; font-weight:900;">45組</div>
-              <div style="font-size:0.75rem; color:#555;">マッチング成立</div>
+        <div class="archive-card-body">
+          <div class="archive-stats">
+            <div class="archive-stat">
+              <div class="archive-stat-num">45組</div>
+              <div class="archive-stat-label">マッチング成立</div>
             </div>
-            <div style="background:#f0f0f0; border:2px solid #111; padding:8px 14px; font-weight:900; font-size:0.85rem; text-align:center;">
-              <div style="color:var(--primary); font-size:1.4rem; font-weight:900;">2days</div>
-              <div style="font-size:0.75rem; color:#555;">連続開催</div>
+            <div class="archive-stat">
+              <div class="archive-stat-num">2days</div>
+              <div class="archive-stat-label">連続開催</div>
             </div>
           </div>
-          <p style="font-size:0.9rem; font-weight:bold; color:#444; line-height:1.6; margin:0;">万代倉庫の雰囲気あるスペースで2日間連続開催。45組のマッチングが成立した記念すべき回。</p>
+          <p class="archive-card-desc">万代倉庫の雰囲気あるスペースで2日間連続開催。45組のマッチングが成立した記念すべき回。</p>
         </div>
       </div>
 
       <!-- アスティ徳島 -->
       <div class="neobrutal-card fade-in-element" style="overflow:hidden;">
-        <div style="background: var(--primary); padding: 60px 30px; text-align:center; position:relative; overflow:hidden;">
-          <div style="position:absolute; top:0; left:0; width:100%; height:100%; opacity:0.08; font-size:8rem; font-weight:900; color:white; display:flex; align-items:center; justify-content:center; pointer-events:none; white-space:nowrap; overflow:hidden;">FES</div>
-          <div style="position:relative; z-index:2;">
-            <div style="background:#111; color:white; display:inline-block; padding:4px 14px; font-weight:900; font-size:0.8rem; margin-bottom:16px; border:2px solid rgba(255,255,255,0.3);">Vol.4 — 2026.02</div>
-            <div style="font-size:2.2rem; font-weight:900; color:white; line-height:1.2; margin-bottom:12px;">アスティ徳島<br>恋フェス</div>
+        <div class="archive-card-header" style="background: var(--primary);">
+          <div class="archive-card-bgtext">FES</div>
+          <div class="archive-card-header-inner">
+            <div class="archive-card-badge" style="background:#111; color:white; border-color:rgba(255,255,255,0.3);">Vol.4 — 2026.02</div>
+            <div class="archive-card-title">アスティ徳島<br>恋フェス</div>
             <div style="color:rgba(255,255,255,0.8); font-weight:bold; font-size:0.9rem;">四国放送 掲載</div>
           </div>
         </div>
-        <div style="padding:20px; background:#fff;">
-          <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:12px;">
-            <div style="background:#f0f0f0; border:2px solid #111; padding:8px 14px; font-weight:900; font-size:0.85rem; text-align:center;">
-              <div style="color:var(--primary); font-size:1.4rem; font-weight:900;">1,800名</div>
-              <div style="font-size:0.75rem; color:#555;">参加者数</div>
+        <div class="archive-card-body">
+          <div class="archive-stats">
+            <div class="archive-stat">
+              <div class="archive-stat-num">1,800名</div>
+              <div class="archive-stat-label">参加者数</div>
             </div>
-            <div style="background:#f0f0f0; border:2px solid #111; padding:8px 14px; font-weight:900; font-size:0.85rem; text-align:center;">
-              <div style="color:var(--primary); font-size:1.4rem; font-weight:900;">TV</div>
-              <div style="font-size:0.75rem; color:#555;">四国放送掲載</div>
+            <div class="archive-stat">
+              <div class="archive-stat-num">TV</div>
+              <div class="archive-stat-label">四国放送掲載</div>
             </div>
           </div>
-          <p style="font-size:0.9rem; font-weight:bold; color:#444; line-height:1.6; margin:0;">徳島最大の会場・アスティ徳島で1,800名が参加。四国放送にも取り上げられた恋フェス史上最大の回。</p>
+          <p class="archive-card-desc">徳島最大の会場・アスティ徳島で1,800名が参加。四国放送にも取り上げられた恋フェス史上最大の回。</p>
         </div>
       </div>
 
@@ -2533,7 +2563,7 @@
     kodurekon: {
       title: "子連れ婚",
       desc: "あなたには、同じ境遇を理解し合える「子連れ婚」が向いています。ひとり親の方が、安心して参加できる出会いの場です。",
-      logo: "/images/logos/kodurekon-logo.png?v=2",
+      logo: "/images/logos/kodurekon-logo.png?v=3",
       url: "/single-mother/",
       cta: "子連れ婚を見る →"
     },
