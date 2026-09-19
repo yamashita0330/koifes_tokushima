@@ -66,7 +66,7 @@
 }
 </script>
 
-<!-- 構造化データ：イベント情報（2026年8月開催の2イベント） -->
+<!-- 構造化データ：イベント情報（2026年8月開催の2イベント＋11月スポーツ恋フェス） -->
 <script type="application/ld+json">
 [
   {
@@ -125,6 +125,27 @@
     "organizer": { "@type": "Organization", "name": "株式会社FUSHIME", "url": "https://koifes-japan.com/" },
     "offers": { "@type": "Offer", "price": "7000", "priceCurrency": "JPY", "availability": "https://schema.org/SoldOut", "url": "https://yumetown-koifes.netlify.app/lp/" },
     "image": "https://koifes-japan.com/images/types/type1.png"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "スポーツ恋フェスJAPAN in TOKUSHIMA",
+    "description": "徳島市・沖洲インドアパークで開催するチーム対抗スポーツ恋活イベント。バスケ・サッカー・バドミントンを通じて自然に距離が縮まる。18〜35歳の独身男女対象、1部・2部の2回制。",
+    "startDate": "2026-11-14T11:00:00+09:00",
+    "endDate": "2026-11-14T20:00:00+09:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "沖洲インドアパーク",
+      "address": { "@type": "PostalAddress", "streetAddress": "東沖洲1丁目8", "addressLocality": "徳島市", "addressRegion": "徳島県", "postalCode": "770-0873", "addressCountry": "JP" }
+    },
+    "organizer": { "@type": "Organization", "name": "株式会社FUSHIME", "url": "https://koifes-japan.com/" },
+    "offers": [
+      { "@type": "Offer", "name": "男性チケット", "price": "5500", "priceCurrency": "JPY", "availability": "https://schema.org/InStock", "url": "http://koifes-japan.jp" },
+      { "@type": "Offer", "name": "女性チケット", "price": "4000", "priceCurrency": "JPY", "availability": "https://schema.org/InStock", "url": "http://koifes-japan.jp" }
+    ],
+    "image": "https://koifes-japan.com/images/types/type1.png"
   }
 ]
 </script>
@@ -164,7 +185,7 @@
       "name": "次回のイベント開催はいつですか？",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "2026年8月開催の2イベントは、いずれも申込みの受付を終了しました。1つ目は8月12日(水)の「阿波踊り恋フェス」（会場：コティ／徳島市）。2つ目は8月29日(土)・30日(日)の「ゆめタウン恋フェス」（会場：ゆめタウン徳島）。次回開催の情報は、LINE公式アカウントで先行案内します。"
+        "text": "次回は2026年11月14日(土)、沖洲インドアパーク（徳島市）で開催する「スポーツ恋フェスJAPAN in TOKUSHIMA」です。1部（11:00〜15:00）・2部（16:00〜20:00）の2回制、対象は18〜35歳の独身男女、参加費は男性5,500円・女性4,000円です。なお、8月開催の「阿波踊り恋フェス」（8月12日）と「ゆめタウン恋フェス」（8月29日・30日）は申込みの受付を終了しました。今後の開催情報は、LINE公式アカウントで先行案内します。"
       }
     },
     {
@@ -788,13 +809,13 @@
 <div class="event-popup-overlay" id="eventPopupOverlay">
   <div class="event-popup">
     <button class="event-popup-close hover-target" onclick="closeEventPopup()" aria-label="閉じる">×</button>
-    <span class="event-popup-flag">INFO</span>
-    <h3>8月開催イベントは<br>受付を終了しました</h3>
+    <span class="event-popup-flag">NEW</span>
+    <h3>スポーツ恋フェスJAPAN<br>開催決定！</h3>
     <ul class="event-popup-list">
-      <li><b>8/12(水)</b> 阿波踊り恋フェス</li>
-      <li><b>8/29(土)・30(日)</b> ゆめタウン恋フェス</li>
+      <li><b>11/14(土)</b> スポーツ恋フェスJAPAN in TOKUSHIMA</li>
+      <li><b>会場</b> 沖洲インドアパーク（徳島市）</li>
     </ul>
-    <a href="https://lin.ee/uvFWKbn" target="_blank" class="event-popup-btn hover-target" onclick="closeEventPopup()">次回情報をLINEで受け取る →</a>
+    <a href="http://koifes-japan.jp" target="_blank" rel="noopener" class="event-popup-btn hover-target" onclick="closeEventPopup()">詳細・お申込みはこちら →</a>
   </div>
 </div>
 
@@ -1219,7 +1240,7 @@
       <div style="margin-top: 20px;"><a href="https://lin.ee/uvFWKbn" target="_blank" class="line-btn-img hover-target" style="display:inline-flex; max-width:360px;"><img src="/images/buttons/line-button.png" alt="LINE登録はこちら" class="line-btn-img-el"></a></div>
     </div>
     <div class="area-panel active" id="area-panel-shikoku">
-      <p style="font-weight: bold; line-height: 1.9; margin: 0 0 16px 0;">四国・徳島は恋フェスJAPAN発祥のエリア。2026年8月開催の阿波踊り恋フェス（8/12）・ゆめタウン恋フェス（8/29・8/30）は、いずれも申込みの受付を終了しました。</p>
+      <p style="font-weight: bold; line-height: 1.9; margin: 0 0 16px 0;">四国・徳島は恋フェスJAPAN発祥のエリア。次回は2026年11月14日(土)、沖洲インドアパークで「スポーツ恋フェスJAPAN in TOKUSHIMA」を開催します。8月開催の阿波踊り恋フェス・ゆめタウン恋フェスは、いずれも申込みの受付を終了しました。</p>
       <a href="#events-area" class="ev-btn hover-target" style="display:inline-block; width:auto; padding:14px 28px;">詳細を見る ↓</a>
     </div>
     <div class="area-panel" id="area-panel-kyushu">
@@ -1255,10 +1276,10 @@
       </a>
       <a href="/sports/" class="theme-card hover-target" style="background: linear-gradient(135deg, #fff2e2 0%, #ffe2c2 100%);">
         <div class="theme-card-bgtext">SPORTS</div>
-        <span class="theme-card-chip is-soon">近日開催予定</span>
+        <span class="theme-card-chip is-soon">11/14 開催決定</span>
         <img class="theme-card-logo" src="/images/logos/sports-logo.png?v=2" alt="スポーツ恋活">
         <p class="theme-card-desc" style="font-weight:bold; color:#555; line-height:1.7;">対象：体を動かすのが好きな方<br>スポーツを通じて自然に距離が縮まる、アクティブな出会いの場。</p>
-        <p class="theme-card-cta" style="font-weight:900; color:#888;">LINE先行登録受付中 →</p>
+        <p class="theme-card-cta" style="font-weight:900; color:var(--primary);">スポーツ恋フェス 11/14開催（詳細を見る）→</p>
       </a>
       <a href="/after5/" class="theme-card hover-target" style="background: linear-gradient(135deg, #eef1fb 0%, #dde3f5 100%);">
         <div class="theme-card-bgtext">AFTER 5</div>
@@ -1366,9 +1387,26 @@
     </div>
 
     <h2 class="section-title" style="margin-top: 20px;">開催イベント</h2>
-    <p style="font-weight: 900; font-size: 1.05rem; color: #444; margin: -24px 0 28px 0;">2026年8月開催の2つの恋フェス。いずれも申込みの受付を終了しました。</p>
+    <p style="font-weight: 900; font-size: 1.05rem; color: #444; margin: -24px 0 28px 0;">次回開催は11月14日(土)のスポーツ恋フェス。8月開催の2つの恋フェスは申込みの受付を終了しました。</p>
 
     <div class="event-grid">
+
+      <!-- スポーツ恋フェスJAPAN -->
+      <article class="event-card fade-in-element">
+        <span class="ev-date is-awa">2026.11.14 (土)</span>
+        <span class="theme-card-chip is-soon" style="margin-bottom:12px;">開催決定</span>
+        <h3 class="ev-title">スポーツ恋フェスJAPAN in TOKUSHIMA</h3>
+        <p class="ev-catch">本気で遊ぶから、本気の恋になる。チーム対抗スポーツ × 恋活フェス。</p>
+        <dl class="ev-dl">
+          <dt>会場</dt><dd>沖洲インドアパーク／徳島市</dd>
+          <dt>時間</dt><dd>1部 11:00〜15:00（受付10:20〜）<br>2部 16:00〜20:00（受付15:30〜）</dd>
+          <dt>対象</dt><dd>18〜35歳の独身男女</dd>
+          <dt>参加費</dt><dd>男性 5,500円／女性 4,000円</dd>
+          <dt>定員</dt><dd>各部 125名・先着順</dd>
+        </dl>
+        <p class="ev-note">🏀 バスケ・サッカー・バドミントンをチーム対抗で。運動神経は一切不問です。</p>
+        <a href="http://koifes-japan.jp" target="_blank" rel="noopener" class="ev-btn hover-target" style="display:block; text-align:center;">詳細・お申込みはこちら →</a>
+      </article>
 
       <!-- 阿波踊り恋フェス -->
       <article class="event-card fade-in-element" style="opacity:0.85;">
@@ -1404,7 +1442,7 @@
 
     </div>
 
-    <p class="event-line-note">※ 両イベントとも申込みの受付を終了しました。次回開催の情報はLINE公式アカウントで先行案内します。</p>
+    <p class="event-line-note">※ 8月開催の2イベントは申込みの受付を終了しました。今後の開催情報はLINE公式アカウントで先行案内します。</p>
 
     <div style="text-align:center; margin-top: 28px;">
       <a href="https://lin.ee/uvFWKbn" target="_blank" class="line-btn-img hover-target" style="display:inline-flex; max-width:360px;"><img src="/images/buttons/line-button.png" alt="LINE登録はこちら" class="line-btn-img-el"></a>
@@ -1631,10 +1669,8 @@
       <details style="background: #f9f9f9; border: var(--border-thick); box-shadow: 4px 4px 0 #111; padding: 18px 20px; margin-bottom: 14px; cursor: pointer;">
         <summary style="font-weight: 900; font-size: 1.05rem; line-height: 1.5; color: #111;">Q. 次回のイベント開催はいつですか？</summary>
         <p style="font-weight: bold; line-height: 1.8; margin: 14px 0 0 0; color: #444; font-size: 0.95rem;">
-          <strong>2026年8月開催の2イベントは、いずれも申込みの受付を終了しました。</strong><br>
-          ①<strong>阿波踊り恋フェス</strong>／8月12日(水)・会場コティ（徳島市）<br>
-          ②<strong>ゆめタウン恋フェス</strong>／8月29日(土)・30日(日)・会場ゆめタウン徳島<br>
-          次回開催の情報は、LINE公式アカウントで先行案内します（登録は無料・いつでも解除OK）。
+          <strong>次回は2026年11月14日(土)、沖洲インドアパーク（徳島市）で開催する「スポーツ恋フェスJAPAN in TOKUSHIMA」です。</strong>1部（11:00〜15:00）・2部（16:00〜20:00）の2回制で、対象は18〜35歳の独身男女です。詳細・お申込みは<a href="http://koifes-japan.jp" target="_blank" rel="noopener" style="color: var(--primary);">スポーツ恋フェス公式ページ</a>をご確認ください。<br>
+          なお、8月開催の阿波踊り恋フェス（8/12）・ゆめタウン恋フェス（8/29・30）は受付を終了しました。今後の開催情報は、LINE公式アカウントで先行案内します（登録は無料・いつでも解除OK）。
         </p>
       </details>
 
