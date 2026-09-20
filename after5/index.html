@@ -78,7 +78,6 @@
 <header class="global-header">
   <a href="/" class="logo hover-target" style="text-decoration:none;">恋フェスJAPAN<span class="logo-sub">AFTER 5</span></a>
   <nav class="header-nav">
-    <a href="#stats-area" class="nav-link hover-target">実績</a>
     <a href="#events-area" class="nav-link hover-target">開催日程</a>
     <a href="#faq-area" class="nav-link hover-target">FAQ</a>
     <a href="/" class="nav-link hover-target">恋フェスJAPANトップへ</a>
@@ -130,23 +129,6 @@
   </div>
 </section>
 
-<section class="content-wrapper fade-in-element" id="stats-area" style="padding-top: 20px; padding-bottom: 20px;">
-  <div style="background: #111; color: white; border: var(--border-thick); box-shadow: var(--shadow-heavy); padding: 36px 4%; display: flex; flex-direction: column; gap: 32px; align-items: center; position: relative; overflow: hidden; flex-wrap: wrap;">
-    <div style="position: relative; z-index: 2; flex: 0 1 480px; min-width: 280px; max-width: 520px;">
-      <span style="background: var(--primary); color: white; padding: 5px 15px; font-weight: 900; border: 2px solid #fff; display: inline-block; margin-bottom: 20px; font-size: 1rem; letter-spacing: 0.05em;">恋フェスJAPAN全体の実績</span>
-      <h2 style="font-size: clamp(1.6rem, 3.5vw, 2.3rem); font-weight: 900; margin: 0 0 24px 0; line-height: 1.45;">参加するだけで<br><span style="color: var(--accent);">「自分の恋愛スコア」</span>が<br>わかる。</h2>
-      <p style="font-weight: bold; font-size: 0.95rem; line-height: 1.8; margin: 0 0 20px 0; color: #ccc;">恋フェスJAPANはこれまで、徳島で累計430組のマッチング実績があります。イベント終了後には「恋の通知表」をお届けする仕組みを、仕事終わりの恋フェスにも導入予定です。</p>
-      <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-        <div style="text-align:center;"><div style="font-size:2.2rem; font-weight:900; color:var(--accent);"><span class="animate-num" data-target="63">0</span>%</div><div style="font-size:0.8rem; color:#ccc; font-weight:bold;">カップル成立/連絡先交換率</div></div>
-        <div style="text-align:center;"><div style="font-size:2.2rem; font-weight:900; color:var(--accent);"><span class="animate-num" data-target="4.7" data-decimals="1">0</span>/5</div><div style="font-size:0.8rem; color:#ccc; font-weight:bold;">参加者満足度</div></div>
-      </div>
-    </div>
-    <div style="flex-shrink: 0; width: 100%; max-width: 480px; margin: 0 auto; position: relative; z-index: 2;">
-      <img src="/images/app/miraiz-screenshot.jpg" alt="MIRAIZアプリ 恋の通知表画面" style="width:100%; height:auto; display:block; border: var(--border-thick); box-shadow: var(--shadow-heavy);">
-    </div>
-  </div>
-</section>
-
 <section class="content-wrapper" id="faq-area">
   <h2 class="section-title">よくある質問</h2>
   <div style="max-width: 900px; margin: 0 auto;">
@@ -181,8 +163,7 @@
   window.KOIFES_SCROLL_STEPS = [
     ['.hero-section', '① ヒーロー'],
     ['#events-area', '② 開催日程'],
-    ['#stats-area', '③ 実績データ'],
-    ['#faq-area', '④ よくある質問']
+    ['#faq-area', '③ よくある質問']
   ];
 </script>
 <script src="/assets/theme.js" defer></script>
