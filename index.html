@@ -491,6 +491,14 @@
   .archive-stat-num { color: var(--primary); font-size: 1rem; font-weight: 900; }
   .archive-stat-label { font-size: 0.6rem; color: #555; }
   .archive-card-desc { font-size: 0.72rem; font-weight: bold; color: #444; line-height: 1.5; margin: 0; }
+  .archive-scroll-hint { display: none; }
+  /* スマホ：過去のイベント実績は横スクロール（スナップ付き） */
+  @media (max-width: 767px) {
+    .archive-scroll-hint { display: block; text-align: center; font-weight: 900; font-size: 0.8rem; color: #666; margin: -12px 0 16px 0; }
+    #archive-area .card-grid { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding: 4px 4% 22px 4px; margin: 0 -4% 8px 0; scroll-padding-left: 4px; }
+    #archive-area .card-grid > .neobrutal-card { flex: 0 0 78%; max-width: 320px; scroll-snap-align: start; opacity: 1; transform: none; }
+    #archive-area .card-grid > .neobrutal-card:hover { transform: none; box-shadow: var(--shadow-heavy); }
+  }
   .card-img { height: 250px; object-fit: cover; border-bottom: var(--border-thick); width: 100%; display: block; }
   .success-tag { background: var(--primary); color: white; padding: 4px 10px; font-weight: 900; border: 2px solid #111111; display: inline-block; margin-bottom: 10px; }
   .btn-apply-card { background: var(--text-dark); color: white; padding: 15px; font-weight: 900; text-align: center; border-top: var(--border-thick); font-size: 1.2rem; }
@@ -1427,6 +1435,7 @@
 
   <section class="content-wrapper" id="archive-area" style="background:#e0e0e0; border-top:var(--border-thick);">
     <h2 class="section-title">過去のイベント実績</h2>
+    <p class="archive-scroll-hint">← 横にスクロールできます →</p>
     <div class="card-grid">
 
       <!-- Novia Novio クリスマス恋フェス（医療関係者限定） -->
