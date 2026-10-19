@@ -2707,7 +2707,7 @@
     b.append('アクション','スクロール');
     b.append('ラベル',STEPS[deepest][1]);
     b.append('ページ',location.pathname+location.search);
-    b.append('流入元',document.referrer||'直接/不明');
+    b.append('流入元',(new URLSearchParams(location.search).get('src')?'IG:'+new URLSearchParams(location.search).get('src'):(document.referrer||'直接/不明')));
     b.append('端末',navigator.userAgent);
     b.append('時刻',new Date().toLocaleString('ja-JP'));
     var body=b.toString(), EP='https://koifes-visit-notify.netlify.app/';
@@ -2736,7 +2736,7 @@
     b.append('form-name','koifes-visit2');
     b.append('アクション','訪問');
     b.append('ページ',location.pathname+location.search);
-    b.append('流入元',document.referrer||'直接/不明');
+    b.append('流入元',(new URLSearchParams(location.search).get('src')?'IG:'+new URLSearchParams(location.search).get('src'):(document.referrer||'直接/不明')));
     b.append('端末',navigator.userAgent);
     b.append('時刻',new Date().toLocaleString('ja-JP'));
     fetch('https://koifes-visit-notify.netlify.app/',{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b.toString()});
